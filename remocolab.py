@@ -122,10 +122,10 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
   my_apt = _MyApt()
   #Following packages are useless because nvidia kernel modules are already loaded and I cannot remove or update it.
   #Uninstall them because upgrading them take long time.
-  my_apt.deleteInstalledPkg("nvidia-dkms", "nvidia-kernel-common", "nvidia-kernel-source")
-  my_apt.commit()
-  my_apt.update_upgrade()
-  my_apt.commit()
+  #my_apt.deleteInstalledPkg("nvidia-dkms", "nvidia-kernel-common", "nvidia-kernel-source")
+  #my_apt.commit()
+  #my_apt.update_upgrade()
+  #my_apt.commit()
 
   subprocess.run(["unminimize"], input = "y\n", check = True, universal_newlines = True)
 
